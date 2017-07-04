@@ -35,7 +35,7 @@
     <input type="file" accept="video/*" capture="camcorder">
     <input type="file" accept="audio/*">
     <div>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="test" cols="30" rows="10"></textarea>
     </div>
     <div class="toolbar">
         <span class="btn">B</span><span class="btn">I</span><span class="btn">U</span>
@@ -43,6 +43,7 @@
     <span>底部js</span>
     <script>
         window.onresize =function(){
+            document.getElementById('test').value = 'test'
             alert('view'+window.innerHeight)
         }
     </script>
