@@ -59,9 +59,10 @@
     <script>
         document.getElementById('test').addEventListener('focus',function(){
             var info = document.getElementsByClassName('toolbar')[0].getBoundingClientRect();
-            info.top = window.innerHeight;
-            console.log('window.innerHeight', info);
-            document.getElementById('test').value = window.innerHeight + ':' + info.top;
+            console.log(info);
+            document.getElementsByClassName('toolbar')[0].style.bottom = window.innerHeight + 'px';
+            console.log(window.innerHeight);
+            document.getElementById('test').value = info.top;
         })
         window.onresize =function(){
             document.getElementById('test').value = window.innerHeight;
