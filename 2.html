@@ -62,7 +62,7 @@
             console.log(info);
             document.getElementsByClassName('toolbar')[0].style.bottom = window.innerHeight + 'px';
             console.log(window.innerHeight);
-            document.getElementById('test').value = info.top;
+            document.getElementById('test').value = window.innerHeight + 'px';
         })
         window.onresize =function(){
             document.getElementById('test').value = window.innerHeight;
