@@ -61,6 +61,13 @@
             console.log(window.innerHeight);
             document.getElementById('test').value = window.innerHeight + 'px';
         })
+        document.onload =function(){
+            var info = document.getElementsByClassName('toolbar')[0].getBoundingClientRect();
+            console.log(info);
+            document.getElementsByClassName('toolbar')[0].style.bottom = window.innerHeight + 'px';
+            console.log(window.innerHeight);
+            document.getElementById('test').value = window.innerHeight + 'px';
+        }
         window.onresize =function(){
             document.getElementById('test').value = window.innerHeight;
             document.getElementById('word').innerText = 1231312;
