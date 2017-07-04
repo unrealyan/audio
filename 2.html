@@ -1,0 +1,39 @@
+<html>
+    <style type="text/css">  
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        textarea{
+            height: 100vh;
+            width: 100vw;
+        }
+        .toolbar{
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .btn{
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            border: 1px solid red;
+            margin: 10px;
+        }
+    </style> 
+    <input type="file" accept="image/*">
+    <input type="file" accept="video/*" capture="camcorder">
+    <input type="file" accept="audio/*">
+    <div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="toolbar">
+        <span class="btn">B</span><span class="btn">I</span><span class="btn">U</span>
+    </div>
+    <span>底部</span>
+</html>
