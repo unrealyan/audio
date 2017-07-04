@@ -60,7 +60,7 @@
         document.getElementById('test').addEventListener('focus',function(){
             var info = document.getElementsByClassName('toolbar')[0].getBoundingClientRect();
             info.top = window.innerHeight;
-            console.log(info);
+            console.log('window.innerHeight', info);
             document.getElementById('test').value = info.top;
         })
         window.onresize =function(){
