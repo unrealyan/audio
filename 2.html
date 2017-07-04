@@ -2,7 +2,7 @@
     <script>
     </script>
     <style type="text/css">
-    @media(max-height: 500){
+    @media screen and (max-height: 450px){
         .toolbar{
             position: fixed;
             bottom: 0;
@@ -14,16 +14,7 @@
             width: 100vw;
         }
     }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        textarea{
-            height: 100vh;
-            width: 100vw;
-        }
+     @media screen and (min-height: 450px){
         .toolbar{
             position: fixed;
             bottom: 0;
@@ -32,6 +23,17 @@
             align-items: center;
             flex-direction: row;
             border:1px solid green;
+            width: 100vw;
+        }
+    }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        textarea{
+            height: 100vh;
             width: 100vw;
         }
         .btn{
