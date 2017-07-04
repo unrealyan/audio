@@ -1,7 +1,19 @@
 <html>
     <script>
     </script>
-    <style type="text/css">  
+    <style type="text/css">
+    @media(max-height: 500){
+        .toolbar{
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            border:1px solid yellow;
+            width: 100vw;
+        }
+    }
         body {
             display: flex;
             justify-content: center;
@@ -42,6 +54,11 @@
     </div>
     <span>底部js</span>
     <script>
+        document.getElementById('test').addEventListener('focus',function(){
+            var info = document.getElementsByClassName('toolbar')[0].getBoundingClientRect();
+            console.log(info);
+            document.getElementById('test').value = info.top;
+        })
         window.onresize =function(){
             document.getElementById('test').value = window.innerHeight;
             document.getElementById('word').innerText = 1231312;
