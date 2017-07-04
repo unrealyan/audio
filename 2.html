@@ -59,6 +59,7 @@
     <script>
         document.getElementById('test').addEventListener('focus',function(){
             var info = document.getElementsByClassName('toolbar')[0].getBoundingClientRect();
+            info.top = window.innerHeight;
             console.log(info);
             document.getElementById('test').value = info.top;
         })
