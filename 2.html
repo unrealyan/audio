@@ -1,7 +1,52 @@
 <html>
+<<<<<<< HEAD
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
 // 首先禁止body
+=======
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        header, footer, main {
+    display: block;
+}
+
+header {
+    position: fixed;
+    height: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+footer {
+    position: fixed;
+    height: 34px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+main {
+    /* main绝对定位，进行内部滚动 */
+    position: absolute;
+    top: 50px;
+    bottom: 34px;
+    /* 使之可以滚动 */
+    overflow-y: scroll;
+    /* 增加该属性，可以增加弹性 */
+    -webkit-overflow-scrolling: touch;
+}
+
+main .content {
+    height: 2000px;
+}
+    </style>
+    <body class="layout-scroll-fixed">
+    <!-- fixed定位的头部 -->
+    <header>
+        <script>
+            // 首先禁止body
+>>>>>>> e197be2ba04f8d7d9dec0a9c51ec6ba81072b7c8
     document.body.ontouchmove = function (e) {
           e.preventDefault();
     };
@@ -21,6 +66,7 @@
             startY = y;
 
         } catch (e) {
+<<<<<<< HEAD
             alert(touchSatrtFunc+ e.message);
         }
     }
@@ -150,3 +196,61 @@
 </script>-->
 
 </html>
+=======
+            alert(‘touchSatrtFunc：‘ + e.message);
+        }
+    }
+    document.addEventListener(‘touchstart‘, touchSatrtFunc, false);
+
+// 然后对允许滚动的条件进行判断，这里讲滚动的元素指向body
+  var _ss = document.body;
+    _ss.ontouchmove = function (ev) {
+        var _point = ev.touches[0],
+                _top = _ss.scrollTop;
+        // 什么时候到底部
+        var _bottomFaVal = _ss.scrollHeight - _ss.offsetHeight;
+        // 到达顶端
+        if (_top === 0) {
+            // 阻止向下滑动
+            if (_point.clientY > startY) {
+                ev.preventDefault();
+            } else {
+                // 阻止冒泡
+                // 正常执行
+                ev.stopPropagation();
+            }
+        } else if (_top === _bottomFaVal) {
+            // 到达底部 如果想禁止页面滚动和上拉加载，讲这段注释放开，也就是在滚动到页面底部的制售阻止默认事件
+            // 阻止向上滑动
+            // if (_point.clientY < startY) {
+            //     ev.preventDefault();
+            // } else {
+            //     // 阻止冒泡
+            //     // 正常执行
+            //     ev.stopPropagation();
+            // }
+        } else if (_top > 0 && _top < _bottomFaVal) {
+            ev.stopPropagation();
+        } else {
+            ev.preventDefault();
+        }
+    };
+        </script>
+    </header>
+    
+    <!-- 可以滚动的区域 -->
+    <main>
+        <textarea></textarea>
+        <div class="content">
+        <!-- 内容在这里... -->
+        </div>
+    </main>
+    
+    <!-- fixed定位的底部 -->
+    <footer>
+        <input type="text" placeholder="Footer..."/>
+        <button class="submit">提交</button>
+    </footer>
+</body>
+</html>
+>>>>>>> e197be2ba04f8d7d9dec0a9c51ec6ba81072b7c8
