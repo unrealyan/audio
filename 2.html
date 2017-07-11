@@ -2,9 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
 // 首先禁止body
-    document.body.ontouchmove = function (e) {
-          e.preventDefault();
-    };
+    // document.body.ontouchmove = function (e) {
+    //       e.preventDefault();
+    // };
+    document.body.addEventListener('touchmove', function(){
+         e.preventDefault();
+    })
 
 // 然后取得触摸点的坐标
    var startX = 0, startY = 0;
