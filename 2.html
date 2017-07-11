@@ -11,6 +11,18 @@
 </head>
 <style type="text/css">
     @media screen and (max-height: 450px) {
+        .header{
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            /*border: 1px solid yellow;*/
+            width: 100vw;
+            height: 45px;
+            background-color: #fff
+        }
         .toolbar {
             position: fixed;
             bottom: 0;
@@ -18,12 +30,25 @@
             justify-content: center;
             align-items: center;
             flex-direction: row;
-            border: 1px solid yellow;
+            /*border: 1px solid yellow;*/
             width: 100vw;
+            background-color: #000
         }
     }
 
     @media screen and (min-height: 450px) {
+        .header{
+            position: fixed;
+            top: 0;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            border: 1px solid yellow;
+            width: 100vw;
+            background-color: #fff
+        }
         .toolbar {
             position: fixed;
             bottom: 0;
@@ -33,6 +58,7 @@
             flex-direction: row;
             border: 1px solid green;
             width: 100vw;
+            background-color: #000
         }
     }
 
@@ -56,6 +82,7 @@
         margin: 10px;
     }
 </style>
+<div class="header"></div>
 <span id="word"></span>
 <div>
     <textarea name="" id="test" cols="30" rows="10"></textarea>
