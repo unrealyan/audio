@@ -1,0 +1,33 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="x5-fullscreen" content="true">
+  <meta name="full-screen" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <title>橡树二维码</title>
+</head>
+<style type="text/css">
+
+</style>
+<div class="body">
+  <input type="file" accept="audio/*" capture="microphone" id="recorder">
+<audio id="player" controls></audio>
+<script>
+  var recorder = document.getElementById('recorder');
+  var player = document.getElementById('player');
+
+  recorder.addEventListener('change', function(e) {
+    var file = e.target.files[0]; 
+    // Do something with the audio file.
+    player.src =  URL.createObjectURL(file);
+  });
+</script>
+</div>
+<script>
+</script>
+</div>
+</html>
