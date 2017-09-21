@@ -11,7 +11,7 @@
     <title>橡树二维码</title>
     <script>
         function open_without_referrer(link){
-         document.body.appendChild(document.createElement('iframe')).src='javascript:"<script>top.location.replace(\''+link+'\')<\/script>"';
+            window.location.replace(link)
         }
         function test() {
             console.log('sdfdsf')
